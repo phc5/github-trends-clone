@@ -42,7 +42,7 @@ export default function Header(props) {
             GraphQL API
           </a>
           <a
-            href="https://www.github.com/phc5/github-trends"
+            href="https://www.github.com/phc5/github-trends-clone"
             target="_blank"
             rel="noopener noreferrer"
           >
