@@ -1,0 +1,12 @@
+type Query {
+  repos(language: String!, time: Int): [Repo]!
+}
+
+type Repo {
+  forks: Int!
+  name: String!
+  language: String!
+  full_name: String!
+  description: String
+  stargazers_count: Int!
+}

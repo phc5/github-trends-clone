@@ -7,12 +7,12 @@ const { ApolloServer } = require('apollo-server-express');
 const PORT = process.env.PORT || 8080;
 
 // declare what the client can ask for
-const typeDefs = fs.readFileSync('./helpers/schema.graphql', {
+const typeDefs = fs.readFileSync('./schema.graphql', {
   encoding: 'utf-8'
 });
 
 // logic that says how the server will respond
-const resolvers = require('./helpers/Query.js');
+const resolvers = require('./resolvers/Query.js');
 
 const server = new ApolloServer({ typeDefs, resolvers });
 
