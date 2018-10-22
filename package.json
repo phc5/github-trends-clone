@@ -1,0 +1,28 @@
+{
+  "name": "trending",
+  "version": "1.0.0",
+  "description": "Clone of trends.now.sh.",
+  "main": "",
+  "scripts": {
+    "setup": "npm run install-client && npm run install-server",
+    "start": "concurrently \"npm run start-client\" \"npm run start-server\"",
+    "install-client": "cd client && npm install",
+    "install-server": "cd server && npm install",
+    "start-client": "cd client && npm start",
+    "start-server": "cd server && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phc5/github-trends-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phc5/github-trends-clone/issues"
+  },
+  "homepage": "https://github.com/phc5/github-trends-clone#readme",
+  "devDependencies": {
+    "concurrently": "^4.0.1"
+  }
+}

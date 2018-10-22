@@ -5,7 +5,7 @@ import { languages, times } from '../helpers/constants';
 
 export default function Header(props) {
   const { onLanguageChange, onTimeChange, language, time } = props;
-  console.log(language);
+
   return (
     <StyledNav>
       <StyledGrid>
