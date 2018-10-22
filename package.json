@@ -4,7 +4,7 @@
   "description": "Clone of trends.now.sh.",
   "main": "",
   "scripts": {
-    "setup": "npm run install-client && npm run install-server",
+    "setup": "npm install && npm run install-client && npm run install-server",
     "start": "concurrently \"npm run start-client\" \"npm run start-server\"",
     "install-client": "cd client && npm install",
     "install-server": "cd server && npm install",
