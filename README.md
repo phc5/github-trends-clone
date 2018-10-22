@@ -1,6 +1,6 @@
 # GitHub Trends
 
-Clone of [trends.now.sh](trends.now.sh).
+Clone of [trends.now.sh](https://trends.now.sh).
 
 ## Installation
 
