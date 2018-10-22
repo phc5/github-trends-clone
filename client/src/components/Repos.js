@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 import styled from 'styled-components';
 
+import Card from './Card';
 import Loader from './Loader';
 
 export default class Repos extends Component {
@@ -17,7 +18,7 @@ export default class Repos extends Component {
           return (
             <StyledCardContainer>
               {data.repos.map(repo => (
-                <div key={repo.full_name}>{repo.name}</div>
+                <Card key={repo.full_name} {...repo} />
               ))}
             </StyledCardContainer>
           );

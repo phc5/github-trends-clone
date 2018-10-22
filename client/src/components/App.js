@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
+import Header from './Header';
 import Repos from './Repos';
 
 import { daysSinceGithubCreated } from '../helpers/constants';
@@ -14,11 +15,31 @@ class App extends Component {
       time: daysSinceGithubCreated
     };
   }
+
+  onLanguageChange = event => {
+    event.preventDefault();
+    this.setState({
+      language: event.target.value
+    });
+  };
+
+  onTimeChange = event => {
+    event.preventDefault();
+    this.setState({
+      time: parseInt(event.target.value)
+    });
+  };
+
   render() {
     return (
       <>
         <GlobalStyles />
         <StyledPage>
+          <Header
+            onLanguageChange={this.onLanguageChange}
+            onTimeChange={this.onTimeChange}
+            {...this.state}
+          />
           <StyledInner>
             <Repos {...this.state} />
           </StyledInner>
