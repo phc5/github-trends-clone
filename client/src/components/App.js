@@ -20,7 +20,7 @@ class App extends Component {
         <GlobalStyles />
         <StyledPage>
           <StyledInner>
-            <Repos />
+            <Repos {...this.state} />
           </StyledInner>
         </StyledPage>
       </>
