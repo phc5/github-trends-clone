@@ -5,7 +5,7 @@ type Query {
 type Repo {
   forks: Int!
   name: String!
-  language: String!
+  language: String
   full_name: String!
   description: String
   stargazers_count: Int!

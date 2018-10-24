@@ -13,7 +13,7 @@ export default class Repos extends Component {
     return (
       <Query query={REPO_QUERY} variables={{ language, time }}>
         {({ loading, error, data }) => {
-          if (loading) return <Loader />;
+          if (loading) return <Loader {...this.props} />;
           if (error) return `Error! ${error.message}`;
           return (
             <StyledCardContainer>

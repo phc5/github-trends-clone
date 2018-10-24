@@ -1,13 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import { getColor } from '../helpers/helpers';
 import { languages, times } from '../helpers/constants';
 
 export default function Header(props) {
   const { onLanguageChange, onTimeChange, language, time } = props;
 
+  const color = getColor(language);
+
   return (
-    <StyledNav>
+    <StyledNav theme={color}>
       <StyledGrid>
         <StyledHeaderForm>
           <StyledLabel>
@@ -55,7 +58,7 @@ export default function Header(props) {
 }
 
 const StyledNav = styled.nav`
-  background-color: #2196f3;
+  background-color: ${({ theme }) => theme};
   border-top: 1rem solid rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084);

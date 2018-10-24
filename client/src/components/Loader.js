@@ -1,9 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Loader() {
+import { getColor } from '../helpers/helpers';
+
+export default function Loader(props) {
+  const { language } = props;
+
+  const color = getColor(language);
+
   return (
-    <StyledSpinner>
+    <StyledSpinner theme={color}>
       <StyledCircleOne />
       <StyledCircleTwo />
     </StyledSpinner>
@@ -25,7 +31,7 @@ const StyledSpinner = styled.div`
 
   ${StyledCircleOne}, ${StyledCircleTwo} {
     animation: scaleCircles 2s infinite ease-in-out;
-    background-color: #2196f3;
+    background-color: ${({ theme }) => theme};
     border-radius: 50%;
     height: 100%;
     left: 0;
