@@ -20,5 +20,5 @@ npm start
 
 ## To do
 
-- Load more repositories on end of scroll
-  [x] Switch color of header on language switch
+- [ ] Load more repositories on end of scroll
+- [x] [Switch color of header on language switch](https://github.com/phc5/github-trends-clone/commit/460bff84714881b27f3b05de6f2aa4b565877eea)
