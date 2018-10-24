@@ -21,4 +21,4 @@ npm start
 ## To do
 
 - Load more repositories on end of scroll
-- Switch color of header on language switch
+  [x] Switch color of header on language switch
